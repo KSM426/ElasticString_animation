@@ -25,9 +25,9 @@ class App {
         this.canvas.height = this.stageHeight * this.pixelRatio;
         this.ctx.scale(this.pixelRatio, this.pixelRatio);
         
-        this.gap = this.stageHeight / this.NumString;
+        this.gap = this.stageHeight * 2 / this.NumString;
         for(let i=0; i<this.NumString; i++) {
-            this.strings[i] = new String(0, this.gap * i, this.stageWidth, this.gap * i);
+            this.strings[i] = new String(0, this.gap * this.NumString / 2 - this.gap * i, this.stageWidth -this.gap * this.NumString / 2 + this.gap * i, this.stageHeight);
         }
 
         for(let i=0; i<this.NumString; i++) {
